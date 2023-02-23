@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .forms import CreatePollForm
+from django.http import HttpResponse
 
-# Create your views here.  
+# Create your views here.
+
 def home(request):
-    """Get home html
+    """Get polls/home html
 
         :param request: The request object used to generate this response
 
@@ -10,10 +13,11 @@ def home(request):
 
         :rtype: HttpResponse 
     """
-    return render(request, "home.html")
-  
-def projects(request):
-    """Get projects html
+    context = {}
+    return render(request, 'poll/home.html', context)
+
+def create(request):
+    """Get polls/create html
 
         :param request: The request object used to generate this response
 
@@ -21,10 +25,11 @@ def projects(request):
 
         :rtype: HttpResponse 
     """
-    return render(request, "projects.html")
-  
-def contact(request):
-    """Get contact html
+    context = {}
+    return render(request, 'poll/create.html', context)
+
+def results(request):
+    """Get polls/results html
 
         :param request: The request object used to generate this response
 
@@ -32,10 +37,23 @@ def contact(request):
 
         :rtype: HttpResponse 
     """
-    return render(request, "contact.html")
+    context = {}
+    return render(request, 'poll/results.html', context)
+
+def vote(request):
+    """Get polls/vote html
+
+        :param request: The request object used to generate this response
+
+        :returns: HttpResponse
+
+        :rtype: HttpResponse 
+    """
+    context = {}
+    return render(request, 'poll/vote.html', context)
     
-def login(request):
-    """Get login html
+def create(request):
+    """Get polls/create html
 
         :param request: The request object used to generate this response
 
@@ -43,4 +61,10 @@ def login(request):
 
         :rtype: HttpResponse 
     """
-    return render(request, "registration/login.html")
+    if request.method == 'POST':
+        form = CreatePollForm(request.POST)
+    else:
+        form = CreatePollForm()
+
+    context = {'form' : form}
+    return render(request, 'poll/create.html', context)
