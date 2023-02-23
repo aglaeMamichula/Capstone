@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>poll package &mdash; Capstone 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Capstone
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">poll package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poll.admin">poll.admin module</a></li>
+<li><a class="reference internal" href="#module-poll.apps">poll.apps module</a><ul>
+<li><a class="reference internal" href="#poll.apps.PollConfig"><code class="docutils literal notranslate"><span class="pre">PollConfig</span></code></a><ul>
+<li><a class="reference internal" href="#poll.apps.PollConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PollConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#poll.apps.PollConfig.name"><code class="docutils literal notranslate"><span class="pre">PollConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-poll.forms">poll.forms module</a><ul>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm"><code class="docutils literal notranslate"><span class="pre">CreatePollForm</span></code></a><ul>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.Meta"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.Meta.fields"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.Meta.model"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.Meta.model</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.base_fields"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#poll.forms.CreatePollForm.media"><code class="docutils literal notranslate"><span class="pre">CreatePollForm.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-poll.models">poll.models module</a><ul>
+<li><a class="reference internal" href="#poll.models.Poll"><code class="docutils literal notranslate"><span class="pre">Poll</span></code></a><ul>
+<li><a class="reference internal" href="#poll.models.Poll.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Poll.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Poll.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.id"><code class="docutils literal notranslate"><span class="pre">Poll.id</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.objects"><code class="docutils literal notranslate"><span class="pre">Poll.objects</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_one"><code class="docutils literal notranslate"><span class="pre">Poll.option_one</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_one_count"><code class="docutils literal notranslate"><span class="pre">Poll.option_one_count</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_three"><code class="docutils literal notranslate"><span class="pre">Poll.option_three</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_three_count"><code class="docutils literal notranslate"><span class="pre">Poll.option_three_count</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_two"><code class="docutils literal notranslate"><span class="pre">Poll.option_two</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.option_two_count"><code class="docutils literal notranslate"><span class="pre">Poll.option_two_count</span></code></a></li>
+<li><a class="reference internal" href="#poll.models.Poll.question"><code class="docutils literal notranslate"><span class="pre">Poll.question</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-poll.tests">poll.tests module</a></li>
+<li><a class="reference internal" href="#module-poll.urls">poll.urls module</a></li>
+<li><a class="reference internal" href="#module-poll.views">poll.views module</a><ul>
+<li><a class="reference internal" href="#poll.views.create"><code class="docutils literal notranslate"><span class="pre">create()</span></code></a></li>
+<li><a class="reference internal" href="#poll.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+<li><a class="reference internal" href="#poll.views.results"><code class="docutils literal notranslate"><span class="pre">results()</span></code></a></li>
+<li><a class="reference internal" href="#poll.views.vote"><code class="docutils literal notranslate"><span class="pre">vote()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-poll">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Capstone</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">poll package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/poll.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="poll-package">
+<h1>poll package<a class="headerlink" href="#poll-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="poll.migrations.html">poll.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poll.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.migrations.html#module-poll.migrations.0001_initial">poll.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="poll.migrations.html#poll.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="poll.migrations.html#poll.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="poll.migrations.html#poll.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="poll.migrations.html#poll.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poll.migrations.html#module-poll.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="poll.static.html">poll.static package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="poll.static.migrations.html">poll.static.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="poll.static.migrations.html#module-poll.static.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static.admin">poll.static.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static.apps">poll.static.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="poll.static.html#poll.static.apps.StaticConfig"><code class="docutils literal notranslate"><span class="pre">StaticConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="poll.static.html#poll.static.apps.StaticConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">StaticConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="poll.static.html#poll.static.apps.StaticConfig.name"><code class="docutils literal notranslate"><span class="pre">StaticConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static.models">poll.static.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static.tests">poll.static.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static.views">poll.static.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poll.static.html#module-poll.static">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-poll.admin">
+<span id="poll-admin-module"></span><h2>poll.admin module<a class="headerlink" href="#module-poll.admin" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-poll.apps">
+<span id="poll-apps-module"></span><h2>poll.apps module<a class="headerlink" href="#module-poll.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="poll.apps.PollConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">poll.apps.</span></span><span class="sig-name descname"><span class="pre">PollConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/apps.html#PollConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.apps.PollConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.apps.PollConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#poll.apps.PollConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.apps.PollConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'poll'</span></em><a class="headerlink" href="#poll.apps.PollConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-poll.forms">
+<span id="poll-forms-module"></span><h2>poll.forms module<a class="headerlink" href="#module-poll.forms" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">poll.forms.</span></span><span class="sig-name descname"><span class="pre">CreatePollForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/forms.html#CreatePollForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.forms.CreatePollForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelForm</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/poll/forms.html#CreatePollForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.forms.CreatePollForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['question',</span> <span class="pre">'option_one',</span> <span class="pre">'option_two',</span> <span class="pre">'option_three']</span></em><a class="headerlink" href="#poll.forms.CreatePollForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#poll.forms.CreatePollForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#poll.models.Poll" title="poll.models.Poll"><code class="xref py py-class docutils literal notranslate"><span class="pre">Poll</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'option_one':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'option_three':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'option_two':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'question':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#poll.forms.CreatePollForm.base_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#poll.forms.CreatePollForm.declared_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="poll.forms.CreatePollForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#poll.forms.CreatePollForm.media" title="Permalink to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-poll.models">
+<span id="poll-models-module"></span><h2>poll.models module<a class="headerlink" href="#module-poll.models" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="poll.models.Poll">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">poll.models.</span></span><span class="sig-name descname"><span class="pre">Poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_one</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_two</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_three</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_one_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_two_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_three_count</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/models.html#Poll"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.models.Poll" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="poll.models.Poll.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#poll.models.Poll.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="poll.models.Poll.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#poll.models.Poll.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#poll.models.Poll.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#poll.models.Poll.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_one">
+<span class="sig-name descname"><span class="pre">option_one</span></span><a class="headerlink" href="#poll.models.Poll.option_one" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_one_count">
+<span class="sig-name descname"><span class="pre">option_one_count</span></span><a class="headerlink" href="#poll.models.Poll.option_one_count" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_three">
+<span class="sig-name descname"><span class="pre">option_three</span></span><a class="headerlink" href="#poll.models.Poll.option_three" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_three_count">
+<span class="sig-name descname"><span class="pre">option_three_count</span></span><a class="headerlink" href="#poll.models.Poll.option_three_count" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_two">
+<span class="sig-name descname"><span class="pre">option_two</span></span><a class="headerlink" href="#poll.models.Poll.option_two" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.option_two_count">
+<span class="sig-name descname"><span class="pre">option_two_count</span></span><a class="headerlink" href="#poll.models.Poll.option_two_count" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="poll.models.Poll.question">
+<span class="sig-name descname"><span class="pre">question</span></span><a class="headerlink" href="#poll.models.Poll.question" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-poll.tests">
+<span id="poll-tests-module"></span><h2>poll.tests module<a class="headerlink" href="#module-poll.tests" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-poll.urls">
+<span id="poll-urls-module"></span><h2>poll.urls module<a class="headerlink" href="#module-poll.urls" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-poll.views">
+<span id="poll-views-module"></span><h2>poll.views module<a class="headerlink" href="#module-poll.views" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="poll.views.create">
+<span class="sig-prename descclassname"><span class="pre">poll.views.</span></span><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/views.html#create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.views.create" title="Permalink to this definition"></a></dt>
+<dd><p>Get polls/create html</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The request object used to generate this response</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="poll.views.home">
+<span class="sig-prename descclassname"><span class="pre">poll.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.views.home" title="Permalink to this definition"></a></dt>
+<dd><p>Get polls/home html</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The request object used to generate this response</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="poll.views.results">
+<span class="sig-prename descclassname"><span class="pre">poll.views.</span></span><span class="sig-name descname"><span class="pre">results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/views.html#results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.views.results" title="Permalink to this definition"></a></dt>
+<dd><p>Get polls/results html</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The request object used to generate this response</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="poll.views.vote">
+<span class="sig-prename descclassname"><span class="pre">poll.views.</span></span><span class="sig-name descname"><span class="pre">vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/poll/views.html#vote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#poll.views.vote" title="Permalink to this definition"></a></dt>
+<dd><p>Get polls/vote html</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – The request object used to generate this response</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>HttpResponse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-poll">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poll" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Aglae Rodriguez.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
